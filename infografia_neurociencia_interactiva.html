@@ -1,0 +1,1626 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Neurociencia Cognitiva — Infografía Argumentativa</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,700;0,9..144,900;1,9..144,400&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root {
+  --purple: #4A3ADB;
+  --purple-light: #EEF0FF;
+  --purple-mid: #9B91F0;
+  --teal: #0D7A61;
+  --teal-light: #DFF5EE;
+  --teal-mid: #3DBFA0;
+  --amber: #C27A0E;
+  --amber-light: #FFF3D8;
+  --amber-mid: #F2A429;
+  --coral: #B93B1A;
+  --coral-light: #FDE9E3;
+  --blue: #1755A8;
+  --blue-light: #E5EEFF;
+  --blue-mid: #4A8CE8;
+  --gray: #6B6966;
+  --gray-light: #F5F3EE;
+  --bg: #FDFCF9;
+  --text: #1A1816;
+  --text-2: #4A4744;
+  --text-3: #8A8784;
+  --border: #E4E0D8;
+  --shadow: 0 4px 24px rgba(0,0,0,0.08);
+  --shadow-lg: 0 12px 48px rgba(0,0,0,0.14);
+}
+
+*{box-sizing:border-box;margin:0;padding:0}
+
+body {
+  font-family:'DM Sans',sans-serif;
+  background: #EDE9E0;
+  min-height:100vh;
+  padding: 24px 16px 60px;
+}
+
+/* ── WRAPPER ── */
+.infografia {
+  max-width: 900px;
+  margin: 0 auto;
+  background: var(--bg);
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: var(--shadow-lg);
+}
+
+/* ── HEADER ── */
+.header-band {
+  background: linear-gradient(135deg, #2E1F9B 0%, #4A3ADB 50%, #6B5CF0 100%);
+  padding: 36px 36px 28px;
+  position: relative;
+  overflow: hidden;
+}
+.header-band::before {
+  content:'';
+  position:absolute; top:-60px; right:-60px;
+  width:280px;height:280px;border-radius:50%;
+  background:rgba(255,255,255,0.04);
+}
+.header-band::after {
+  content:'';
+  position:absolute; bottom:-40px; left:40%;
+  width:200px;height:200px;border-radius:50%;
+  background:rgba(255,255,255,0.03);
+}
+.header-brain-icon {
+  font-size:52px;
+  position:absolute;right:40px;top:24px;
+  opacity:0.25;
+  animation: float 4s ease-in-out infinite;
+}
+@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-8px)}}
+
+.header-kicker {
+  font-size:10px;letter-spacing:3px;text-transform:uppercase;
+  color:rgba(255,255,255,0.55);font-weight:500;margin-bottom:10px;
+  display:flex;align-items:center;gap:8px;
+}
+.header-kicker::before{
+  content:'';display:inline-block;width:20px;height:1.5px;background:rgba(255,255,255,0.4);
+}
+.header-title {
+  font-family:'Fraunces',Georgia,serif;
+  font-size:30px;font-weight:900;color:#fff;line-height:1.2;
+  margin-bottom:8px;
+  text-shadow: 0 2px 12px rgba(0,0,0,0.2);
+}
+.header-subtitle {
+  font-size:13px;color:rgba(255,255,255,0.65);font-weight:300;
+  margin-bottom:18px;max-width:520px;
+}
+.header-tags{display:flex;gap:8px;flex-wrap:wrap;}
+.header-tag {
+  font-size:10px;padding:4px 11px;border-radius:20px;
+  border:1px solid rgba(255,255,255,0.25);color:rgba(255,255,255,0.8);
+  background:rgba(255,255,255,0.08);
+  backdrop-filter:blur(4px);
+}
+
+/* ── PROGRESS BAR ── */
+.progress-bar-wrap{
+  background:#1E1069;
+  padding:10px 36px;
+  display:flex;align-items:center;gap:12px;
+}
+.progress-label{font-size:10px;color:rgba(255,255,255,0.5);letter-spacing:2px;text-transform:uppercase;white-space:nowrap;}
+.progress-track{flex:1;height:3px;background:rgba(255,255,255,0.1);border-radius:3px;overflow:hidden;}
+.progress-fill{height:100%;width:0%;background:linear-gradient(90deg,var(--teal-mid),var(--amber-mid));border-radius:3px;transition:width 1s ease;}
+.progress-pct{font-size:10px;color:rgba(255,255,255,0.5);white-space:nowrap;}
+
+/* ── NAV TABS ── */
+.nav-tabs{
+  display:flex;gap:0;
+  background:#F0EDE5;
+  border-bottom:1.5px solid var(--border);
+  overflow-x:auto;
+}
+.nav-tab{
+  flex:1;min-width:120px;
+  padding:13px 16px;
+  font-size:11px;font-weight:500;letter-spacing:0.5px;
+  color:var(--text-3);
+  background:transparent;border:none;cursor:pointer;
+  transition:all 0.2s;
+  display:flex;align-items:center;justify-content:center;gap:6px;
+  border-bottom:2.5px solid transparent;margin-bottom:-1.5px;
+  white-space:nowrap;
+}
+.nav-tab:hover{color:var(--text-2);background:rgba(255,255,255,0.5);}
+.nav-tab.active{color:var(--purple);border-bottom-color:var(--purple);background:#fff;font-weight:600;}
+.nav-tab-icon{font-size:14px;}
+
+/* ── SECTIONS ── */
+.section-panel{display:none;animation:fadeIn 0.3s ease;}
+.section-panel.active{display:block;}
+@keyframes fadeIn{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:translateY(0)}}
+
+.panel-inner{padding:28px 32px;}
+
+/* ── SECTION LABELS ── */
+.s-label{
+  font-size:9px;letter-spacing:3px;text-transform:uppercase;
+  color:var(--text-3);font-weight:600;
+  margin-bottom:14px;
+  display:flex;align-items:center;gap:8px;
+}
+.s-label::after{content:'';flex:1;height:1px;background:var(--border);}
+
+/* ── PARTE BADGE ── */
+.parte-badge-row{display:flex;align-items:center;gap:12px;margin-bottom:20px;}
+.parte-badge{
+  padding:4px 12px;border-radius:20px;
+  font-size:10px;font-weight:600;letter-spacing:1px;text-transform:uppercase;
+  color:#fff;
+}
+.parte-badge.p1{background:var(--purple);}
+.parte-badge.p2{background:var(--teal);}
+.parte-heading{font-family:'Fraunces',serif;font-size:20px;font-weight:700;color:var(--text);}
+
+/* ── STAT STRIP ── */
+.stat-strip{
+  display:grid;grid-template-columns:repeat(4,1fr);gap:1px;
+  background:var(--border);border-radius:12px;overflow:hidden;
+  margin-bottom:28px;
+}
+.stat-cell{
+  background:var(--bg);padding:14px 16px;text-align:center;
+}
+.stat-num{font-family:'Fraunces',serif;font-size:28px;font-weight:900;color:var(--purple);line-height:1;}
+.stat-lbl{font-size:10px;color:var(--text-3);margin-top:3px;}
+
+/* ── TIMELINE ── */
+.timeline{position:relative;padding-left:24px;}
+.timeline-line{
+  position:absolute;left:0;top:0;bottom:0;
+  width:2px;
+  background:linear-gradient(to bottom,var(--purple),var(--teal),var(--amber));
+  border-radius:2px;
+}
+
+.hito{
+  position:relative;margin-bottom:14px;
+  display:flex;gap:16px;
+}
+.hito-marker{
+  flex-shrink:0;display:flex;flex-direction:column;align-items:center;
+  width:90px;padding-top:4px;
+}
+.hito-year{
+  font-size:10px;font-weight:600;color:var(--text-3);
+  white-space:nowrap;margin-bottom:5px;
+}
+.hito-dot-outer{
+  width:18px;height:18px;border-radius:50%;
+  border:2.5px solid var(--purple);
+  background:var(--bg);
+  display:flex;align-items:center;justify-content:center;
+  transition:all 0.25s;
+  cursor:pointer;
+  position:relative;
+}
+.hito-dot-outer::before{
+  content:'';position:absolute;
+  width:6px;height:6px;border-radius:50%;
+  background:var(--purple);
+  transition:all 0.25s;
+}
+.hito:hover .hito-dot-outer{
+  background:var(--purple);
+  transform:scale(1.2);
+  box-shadow:0 0 0 4px rgba(74,58,219,0.15);
+}
+.hito:hover .hito-dot-outer::before{background:#fff;}
+
+.hito-card{
+  flex:1;
+  background:#fff;
+  border:1.5px solid var(--border);
+  border-radius:12px;
+  padding:14px 16px;
+  cursor:pointer;
+  transition:all 0.25s;
+  position:relative;
+  overflow:hidden;
+}
+.hito-card::before{
+  content:'';
+  position:absolute;left:0;top:0;bottom:0;width:3px;
+  background:var(--purple);border-radius:3px 0 0 3px;
+  transition:width 0.2s;
+}
+.hito:hover .hito-card{
+  border-color:var(--purple-mid);
+  box-shadow:0 4px 20px rgba(74,58,219,0.12);
+  transform:translateX(3px);
+}
+.hito:hover .hito-card::before{width:4px;}
+
+.hito-head{display:flex;align-items:flex-start;gap:8px;margin-bottom:6px;}
+.hito-icon{font-size:18px;flex-shrink:0;line-height:1.3;}
+.hito-name{font-size:13px;font-weight:600;color:var(--text);flex:1;}
+.hito-persona{
+  font-size:10px;color:#fff;background:var(--purple-mid);
+  padding:2px 8px;border-radius:10px;white-space:nowrap;
+  flex-shrink:0;
+}
+.hito-desc{
+  font-size:12px;color:var(--text-2);line-height:1.6;
+  margin-bottom:8px;
+}
+.hito-method-row{display:flex;align-items:flex-start;gap:7px;}
+.method-pill{
+  font-size:10px;padding:3px 8px;border-radius:10px;
+  font-weight:500;white-space:nowrap;flex-shrink:0;
+  background:var(--amber-light);color:var(--amber);
+  border:1px solid rgba(194,122,14,0.2);
+}
+.method-text{font-size:11px;color:var(--text-3);line-height:1.45;}
+.hito-more-btn{
+  display:inline-flex;align-items:center;gap:4px;
+  margin-top:8px;font-size:10px;font-weight:500;
+  color:var(--purple);background:var(--purple-light);
+  border:none;padding:4px 10px;border-radius:8px;cursor:pointer;
+  transition:all 0.2s;
+}
+.hito-more-btn:hover{background:var(--purple);color:#fff;}
+
+/* Color per epoch */
+.era-0 .hito-card::before,.era-0 .hito-dot-outer{border-color:#9B6B3A;}
+.era-0 .hito-dot-outer::before{background:#9B6B3A;}
+.era-0 .hito-persona{background:#C4945A;}
+.era-1 .hito-card::before,.era-1 .hito-dot-outer{border-color:#B93B1A;}
+.era-1 .hito-dot-outer::before{background:#B93B1A;}
+.era-1 .hito-persona{background:#D85A30;}
+.era-2 .hito-card::before,.era-2 .hito-dot-outer{border-color:#0D7A61;}
+.era-2 .hito-dot-outer::before{background:#0D7A61;}
+.era-2 .hito-persona{background:#3DBFA0;}
+.era-3 .hito-card::before,.era-3 .hito-dot-outer{border-color:#6B6966;}
+.era-3 .hito-dot-outer::before{background:#6B6966;}
+.era-3 .hito-persona{background:#8A8784;}
+.era-4 .hito-card::before,.era-4 .hito-dot-outer{border-color:#1755A8;}
+.era-4 .hito-dot-outer::before{background:#1755A8;}
+.era-4 .hito-persona{background:#4A8CE8;}
+.era-5 .hito-card::before,.era-5 .hito-dot-outer{border-color:#4A3ADB;}
+.era-5 .hito-dot-outer::before{background:#4A3ADB;}
+.era-5 .hito-persona{background:#9B91F0;}
+.era-6 .hito-card::before,.era-6 .hito-dot-outer{border-color:#C27A0E;}
+.era-6 .hito-dot-outer::before{background:#C27A0E;}
+.era-6 .hito-persona{background:#F2A429;}
+.era-7 .hito-card::before,.era-7 .hito-dot-outer{border-color:#0D7A61;}
+.era-7 .hito-dot-outer::before{background:#0D7A61;}
+.era-7 .hito-persona{background:#3DBFA0;}
+
+/* ── METHODS GRID ── */
+.methods-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:24px;}
+.method-card{
+  background:#fff;border:1.5px solid var(--border);
+  border-radius:12px;padding:18px;
+  transition:all 0.25s;cursor:pointer;
+  position:relative;overflow:hidden;
+}
+.method-card:hover{
+  box-shadow:0 6px 24px rgba(0,0,0,0.1);
+  transform:translateY(-2px);
+}
+.method-card-emoji{font-size:28px;margin-bottom:10px;}
+.method-badge-row{display:flex;align-items:center;gap:8px;margin-bottom:8px;}
+.mbadge{
+  font-size:10px;padding:3px 9px;border-radius:10px;font-weight:600;
+}
+.mbadge-fmri{background:var(--teal-light);color:var(--teal);}
+.mbadge-eeg{background:var(--blue-light);color:var(--blue);}
+.method-card-title{font-size:13px;font-weight:600;color:var(--text);}
+.method-card-desc{font-size:12px;color:var(--text-2);line-height:1.6;margin-bottom:10px;}
+.method-ventaja{
+  padding:8px 12px;border-radius:8px;
+  font-size:11px;font-weight:500;
+  border-left:3px solid;
+}
+.ventaja-teal{background:var(--teal-light);color:var(--teal);border-color:var(--teal);}
+.ventaja-blue{background:var(--blue-light);color:var(--blue);border-color:var(--blue);}
+.method-learn-btn{
+  margin-top:10px;font-size:10px;font-weight:500;
+  color:var(--purple);background:var(--purple-light);
+  border:none;padding:4px 10px;border-radius:8px;cursor:pointer;
+  transition:all 0.2s;display:inline-flex;align-items:center;gap:4px;
+}
+.method-learn-btn:hover{background:var(--purple);color:#fff;}
+
+/* ── PARTE 2 — TEORÍAS ── */
+.tendencia-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:20px;}
+.tend-card{
+  border-radius:12px;padding:18px;border:2px solid var(--border);
+  transition:all 0.25s;cursor:pointer;
+}
+.tend-card:hover{transform:translateY(-2px);box-shadow:0 4px 16px rgba(0,0,0,0.08);}
+.tend-card.selected{
+  border-color:var(--teal);background:var(--teal-light);
+}
+.tend-card.alt{background:var(--gray-light);}
+.tend-icon{font-size:28px;margin-bottom:10px;}
+.tend-label-badge{
+  font-size:9px;font-weight:600;letter-spacing:2px;text-transform:uppercase;
+  margin-bottom:6px;
+}
+.lbl-selected{color:var(--teal);}
+.lbl-alt{color:var(--gray);}
+.tend-name{font-family:'Fraunces',serif;font-size:16px;font-weight:700;color:var(--text);margin-bottom:8px;}
+.tend-desc{font-size:12px;color:var(--text-2);line-height:1.6;}
+.tend-chosen-badge{
+  display:inline-block;margin-top:10px;
+  font-size:10px;padding:3px 10px;border-radius:10px;
+  background:var(--teal);color:#fff;font-weight:600;
+}
+.tend-compare-btn{
+  margin-top:10px;font-size:10px;font-weight:500;
+  color:var(--gray);background:#fff;
+  border:1.5px solid var(--border);padding:4px 10px;border-radius:8px;
+  cursor:pointer;transition:all 0.2s;display:inline-flex;align-items:center;gap:4px;
+}
+.tend-compare-btn:hover{border-color:var(--purple);color:var(--purple);}
+
+/* ── ARGUMENTOS ── */
+.arg-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px;margin-bottom:20px;}
+.arg-card{
+  border-radius:12px;padding:16px;
+  border:1.5px solid rgba(13,122,97,0.2);
+  background:linear-gradient(135deg,var(--teal-light),#fff);
+  cursor:pointer;transition:all 0.25s;
+}
+.arg-card:hover{transform:translateY(-3px);box-shadow:0 6px 20px rgba(13,122,97,0.15);}
+.arg-icon{font-size:24px;margin-bottom:8px;}
+.arg-num{font-family:'Fraunces',serif;font-size:32px;font-weight:900;color:var(--teal);line-height:1;margin-bottom:4px;}
+.arg-title{font-size:12px;font-weight:600;color:var(--teal);margin-bottom:6px;}
+.arg-text{font-size:11px;color:var(--text-2);line-height:1.55;}
+
+/* ── DEBATE VISUAL ── */
+.debate-bar{
+  display:grid;grid-template-columns:1fr 40px 1fr;gap:8px;align-items:center;
+  margin:16px 0;
+}
+.debate-side{
+  padding:12px 14px;border-radius:10px;
+  font-size:11px;color:var(--text-2);
+}
+.debate-side-head{font-size:12px;font-weight:600;margin-bottom:4px;}
+.debate-d{background:var(--teal-light);}
+.debate-l{background:var(--gray-light);}
+.debate-vs{
+  text-align:center;font-family:'Fraunces',serif;
+  font-size:13px;font-weight:900;color:var(--text-3);
+}
+
+/* ── REFS ── */
+.refs-section{
+  background:#F8F6F1;border:1.5px solid var(--border);
+  border-radius:12px;padding:18px 20px;
+}
+.refs-head{
+  display:flex;align-items:center;gap:8px;
+  font-size:13px;font-weight:600;color:var(--text);margin-bottom:14px;
+}
+.refs-badge{
+  font-size:10px;padding:2px 8px;border-radius:8px;
+  background:var(--purple-light);color:var(--purple);font-weight:600;
+}
+.ref-item{
+  font-size:11px;color:var(--text-2);line-height:1.6;
+  padding:7px 0;border-bottom:1px solid var(--border);
+  display:flex;gap:10px;align-items:flex-start;
+}
+.ref-item:last-child{border-bottom:none;padding-bottom:0;}
+.ref-num{
+  flex-shrink:0;width:20px;height:20px;
+  background:var(--purple-light);color:var(--purple);
+  border-radius:50%;font-size:9px;font-weight:700;
+  display:flex;align-items:center;justify-content:center;margin-top:1px;
+}
+.ref-doi{
+  color:var(--blue);font-size:10px;display:block;
+  margin-top:2px;word-break:break-all;
+}
+
+/* ── FOOTER ── */
+.footer-band{
+  display:flex;align-items:center;justify-content:space-between;
+  padding:14px 32px;
+  background:#F0EDE5;
+  border-top:1.5px solid var(--border);
+  font-size:11px;color:var(--text-3);
+  flex-wrap:wrap;gap:8px;
+}
+.footer-band strong{color:var(--text-2);}
+
+/* ── MODAL ── */
+.modal-overlay{
+  position:fixed;inset:0;
+  background:rgba(15,12,40,0.7);backdrop-filter:blur(6px);
+  z-index:1000;display:none;align-items:center;justify-content:center;
+  padding:20px;
+}
+.modal-overlay.open{display:flex;}
+.modal{
+  background:#fff;border-radius:20px;
+  max-width:560px;width:100%;
+  max-height:90vh;overflow-y:auto;
+  box-shadow:0 24px 80px rgba(0,0,0,0.25);
+  animation:modalIn 0.3s cubic-bezier(0.34,1.56,0.64,1);
+}
+@keyframes modalIn{
+  from{transform:scale(0.85) translateY(20px);opacity:0}
+  to{transform:scale(1) translateY(0);opacity:1}
+}
+.modal-header{
+  padding:22px 24px 0;
+  display:flex;align-items:flex-start;justify-content:space-between;
+  gap:12px;
+}
+.modal-icon{font-size:36px;line-height:1;}
+.modal-title{
+  font-family:'Fraunces',serif;font-size:20px;font-weight:700;
+  color:var(--text);flex:1;line-height:1.3;
+}
+.modal-close{
+  background:var(--gray-light);border:none;
+  width:32px;height:32px;border-radius:50%;
+  cursor:pointer;font-size:16px;color:var(--text-2);
+  display:flex;align-items:center;justify-content:center;
+  transition:all 0.2s;flex-shrink:0;
+}
+.modal-close:hover{background:#E0DDD5;color:var(--text);}
+.modal-body{padding:16px 24px 24px;}
+.modal-persona-row{
+  display:flex;align-items:center;gap:8px;margin-bottom:12px;
+}
+.modal-persona-badge{
+  font-size:10px;padding:3px 10px;border-radius:10px;
+  background:var(--purple-light);color:var(--purple);font-weight:600;
+}
+.modal-year{font-size:11px;color:var(--text-3);}
+.modal-section{margin-bottom:14px;}
+.modal-section-title{
+  font-size:11px;font-weight:600;letter-spacing:1px;text-transform:uppercase;
+  color:var(--text-3);margin-bottom:6px;
+  display:flex;align-items:center;gap:6px;
+}
+.modal-section-title::after{content:'';flex:1;height:1px;background:var(--border);}
+.modal-text{font-size:13px;color:var(--text-2);line-height:1.7;}
+.modal-pill{
+  display:inline-flex;align-items:center;gap:6px;
+  padding:5px 12px;border-radius:20px;
+  font-size:11px;font-weight:500;
+  background:var(--amber-light);color:var(--amber);
+  border:1px solid rgba(194,122,14,0.2);
+  margin-bottom:8px;
+}
+.modal-impact{
+  background:var(--purple-light);border-radius:8px;
+  padding:10px 14px;
+  font-size:12px;color:var(--purple);
+  border-left:3px solid var(--purple);
+}
+.modal-impact-title{font-weight:600;margin-bottom:3px;font-size:11px;}
+
+/* ── INFO BOXES ── */
+.info-box{
+  border-radius:10px;padding:12px 14px;
+  display:flex;gap:10px;margin:12px 0;
+}
+.info-box-icon{font-size:18px;flex-shrink:0;}
+.info-box-content{}
+.info-box-title{font-size:11px;font-weight:600;margin-bottom:3px;}
+.info-box-text{font-size:11px;color:var(--text-2);line-height:1.5;}
+.ibox-yellow{background:var(--amber-light);border:1px solid rgba(194,122,14,0.2);}
+.ibox-yellow .info-box-title{color:var(--amber);}
+.ibox-teal{background:var(--teal-light);border:1px solid rgba(13,122,97,0.2);}
+.ibox-teal .info-box-title{color:var(--teal);}
+.ibox-purple{background:var(--purple-light);border:1px solid rgba(74,58,219,0.2);}
+.ibox-purple .info-box-title{color:var(--purple);}
+.ibox-coral{background:var(--coral-light);border:1px solid rgba(185,59,26,0.2);}
+.ibox-coral .info-box-title{color:var(--coral);}
+
+/* ── TOOLTIP ── */
+.tooltip-wrap{position:relative;display:inline-block;}
+.tooltip-trigger{
+  cursor:help;
+  border-bottom:1.5px dashed var(--purple-mid);
+  color:var(--purple);
+}
+.tooltip-box{
+  position:absolute;bottom:calc(100% + 6px);left:50%;
+  transform:translateX(-50%);
+  background:#1A1816;color:#fff;
+  font-size:11px;line-height:1.5;
+  padding:8px 12px;border-radius:8px;
+  width:220px;z-index:100;
+  opacity:0;pointer-events:none;
+  transition:opacity 0.2s;
+  text-align:left;
+}
+.tooltip-box::after{
+  content:'';position:absolute;top:100%;left:50%;
+  transform:translateX(-50%);
+  border:5px solid transparent;
+  border-top-color:#1A1816;
+}
+.tooltip-wrap:hover .tooltip-box{opacity:1;}
+
+/* ── QUIZ SECTION ── */
+.quiz-wrap{
+  background:#fff;border:1.5px solid var(--border);
+  border-radius:12px;padding:20px;margin-top:14px;
+}
+.quiz-header{display:flex;align-items:center;gap:10px;margin-bottom:14px;}
+.quiz-badge{
+  background:var(--amber-light);color:var(--amber);
+  font-size:10px;font-weight:600;padding:3px 10px;
+  border-radius:10px;border:1px solid rgba(194,122,14,0.2);
+}
+.quiz-title{font-size:14px;font-weight:600;color:var(--text);}
+.quiz-question{
+  font-size:14px;color:var(--text);font-weight:500;
+  margin-bottom:12px;line-height:1.5;
+}
+.quiz-options{display:flex;flex-direction:column;gap:7px;margin-bottom:12px;}
+.quiz-option{
+  padding:10px 14px;border-radius:8px;
+  border:1.5px solid var(--border);
+  font-size:12px;color:var(--text-2);
+  cursor:pointer;transition:all 0.2s;text-align:left;
+  background:#fff;
+}
+.quiz-option:hover{border-color:var(--purple-mid);background:var(--purple-light);color:var(--purple);}
+.quiz-option.correct{border-color:var(--teal);background:var(--teal-light);color:var(--teal);font-weight:500;}
+.quiz-option.wrong{border-color:var(--coral);background:var(--coral-light);color:var(--coral);}
+.quiz-feedback{
+  font-size:12px;padding:10px 14px;border-radius:8px;
+  display:none;margin-bottom:10px;line-height:1.5;
+}
+.quiz-feedback.show{display:block;}
+.quiz-feedback.ok{background:var(--teal-light);color:var(--teal);}
+.quiz-feedback.fail{background:var(--coral-light);color:var(--coral);}
+.quiz-next-btn{
+  font-size:12px;font-weight:500;
+  background:var(--purple);color:#fff;
+  border:none;padding:8px 16px;border-radius:8px;
+  cursor:pointer;transition:all 0.2s;display:none;
+}
+.quiz-next-btn:hover{background:#3528C0;}
+.quiz-next-btn.show{display:inline-flex;align-items:center;gap:6px;}
+.quiz-progress{
+  display:flex;gap:4px;margin-bottom:12px;
+}
+.qp-dot{
+  width:8px;height:8px;border-radius:50%;
+  background:var(--border);transition:background 0.3s;
+}
+.qp-dot.done{background:var(--teal);}
+.qp-dot.active{background:var(--purple);}
+
+/* ── TIMELINE TABS ── */
+.era-filter{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:16px;}
+.era-btn{
+  font-size:10px;padding:4px 10px;border-radius:20px;
+  border:1.5px solid var(--border);background:#fff;
+  color:var(--text-2);cursor:pointer;transition:all 0.2s;font-weight:500;
+}
+.era-btn:hover{border-color:var(--purple);color:var(--purple);}
+.era-btn.active{background:var(--purple);color:#fff;border-color:var(--purple);}
+
+/* ── SCROLL REVEAL ── */
+.reveal{opacity:0;transform:translateY(16px);transition:all 0.5s ease;}
+.reveal.visible{opacity:1;transform:translateY(0);}
+
+/* ── RESPONSIVE ── */
+@media(max-width:640px){
+  .panel-inner{padding:18px 16px;}
+  .stat-strip{grid-template-columns:1fr 1fr;}
+  .arg-grid,.methods-grid,.tendencia-grid{grid-template-columns:1fr;}
+  .header-title{font-size:22px;}
+  .debate-bar{grid-template-columns:1fr;gap:4px;}
+  .debate-vs{display:none;}
+  .hito-marker{width:70px;}
+}
+</style>
+</head>
+<body>
+
+<div class="infografia">
+
+  <!-- HEADER -->
+  <div class="header-band">
+    <div class="header-brain-icon">🧠</div>
+    <p class="header-kicker">SP26 · VNS6032 · Semanas 2 y 3</p>
+    <h1 class="header-title">El Legado histórico y el debate mente-cerebro</h1>
+    <p class="header-subtitle">Infografía Argumentativa · Neurociencia Cognitiva y Educación · Broward International University</p>
+    <p class="header-subtitle">Por: Paula Daniela Galvis Barrera</p>
+    <div class="header-tags">
+      <span class="header-tag">📋 Asignación #2</span>
+      <span class="header-tag">🖼️ Póster Digital Crítico</span>
+      <span class="header-tag">📚 APA 7ª Edición</span>
+      <span class="header-tag">⏱️ 8 Hitos + 2 Métodos</span>
+    </div>
+  </div>
+
+  <!-- PROGRESS -->
+  <div class="progress-bar-wrap">
+    <span class="progress-label">Progreso de lectura</span>
+    <div class="progress-track"><div class="progress-fill" id="progressFill"></div></div>
+    <span class="progress-pct" id="progressPct">0%</span>
+  </div>
+
+  <!-- NAV TABS -->
+  <div class="nav-tabs">
+    <button class="nav-tab active" onclick="showTab('historia')">
+      <span class="nav-tab-icon">⏳</span> Historia
+    </button>
+    <button class="nav-tab" onclick="showTab('metodos')">
+      <span class="nav-tab-icon">🔬</span> Métodos
+    </button>
+    <button class="nav-tab" onclick="showTab('debate')">
+      <span class="nav-tab-icon">⚖️</span> Debate Teórico
+    </button>
+    <button class="nav-tab" onclick="showTab('quiz')">
+      <span class="nav-tab-icon">🧩</span> Autoevaluación
+    </button>
+    <button class="nav-tab" onclick="showTab('refs')">
+      <span class="nav-tab-icon">📖</span> Referencias
+    </button>
+  </div>
+
+  <!-- ============================================================ -->
+  <!-- TAB 1: HISTORIA -->
+  <!-- ============================================================ -->
+  <div class="section-panel active" id="tab-historia">
+    <div class="panel-inner">
+
+      <div class="parte-badge-row">
+        <span class="parte-badge p1">Parte 1</span>
+        <h2 class="parte-heading">Desarrollo histórico y metodológico — El Legado</h2>
+      </div>
+
+      <!-- Stats -->
+      <div class="stat-strip reveal">
+        <div class="stat-cell">
+          <div class="stat-num" data-target="8">0</div>
+          <div class="stat-lbl">Hitos fundacionales</div>
+        </div>
+        <div class="stat-cell">
+          <div class="stat-num" data-target="225">0</div>
+          <div class="stat-lbl">Años de historia</div>
+        </div>
+        <div class="stat-cell">
+          <div class="stat-num" data-target="3">0</div>
+          <div class="stat-lbl">Premios Nobel</div>
+        </div>
+        <div class="stat-cell">
+          <div class="stat-num" data-target="10">0</div>
+          <div class="stat-lbl">Referencias APA</div>
+        </div>
+      </div>
+
+      <div class="info-box ibox-yellow reveal">
+        <span class="info-box-icon">💡</span>
+        <div>
+          <div class="info-box-title">¿Cómo usar esta sección?</div>
+          <div class="info-box-text">Haz clic en cualquier hito de la línea de tiempo para ver un panel informativo detallado con contexto, método científico e impacto educativo. Puedes filtrar por era histórica.</div>
+        </div>
+      </div>
+
+      <!-- Filter -->
+      <div class="s-label reveal">Línea de tiempo · 8 hitos fundacionales</div>
+      <div class="era-filter reveal" id="eraFilter">
+        <button class="era-btn active" onclick="filterEra('all',this)">Todos</button>
+        <button class="era-btn" onclick="filterEra('era-0 era-1 era-2',this)">🏛️ S.XIX</button>
+        <button class="era-btn" onclick="filterEra('era-3 era-4',this)">⚙️ 1900–1960</button>
+        <button class="era-btn" onclick="filterEra('era-5 era-6 era-7',this)">🔬 1960–hoy</button>
+      </div>
+
+      <!-- Timeline -->
+      <div class="timeline reveal" id="timeline">
+        <div class="timeline-line"></div>
+
+        <!-- HITO 0 -->
+        <div class="hito era-0" onclick="openModal(0)">
+          <div class="hito-marker">
+            <span class="hito-year">1796–1815</span>
+            <div class="hito-dot-outer"></div>
+          </div>
+          <div class="hito-card">
+            <div class="hito-head">
+              <span class="hito-icon">🗺️</span>
+              <span class="hito-name">Frenología de Gall — primeros mapas cerebrales</span>
+              <span class="hito-persona">Gall & Spurzheim</span>
+            </div>
+            <p class="hito-desc">Franz Joseph Gall postuló que cada región del cráneo correspondía a una función mental, inaugurando el debate sobre la localización funcional del cerebro.</p>
+            <div class="hito-method-row">
+              <span class="method-pill">🖐️ Palpación craneal</span>
+              <span class="method-text">Aunque pseudocientífica, sembró la hipótesis de que la mente reside en el encéfalo.</span>
+            </div>
+            <button class="hito-more-btn">🔍 Ver detalles</button>
+          </div>
+        </div>
+
+        <!-- HITO 1 -->
+        <div class="hito era-1" onclick="openModal(1)">
+          <div class="hito-marker">
+            <span class="hito-year">1861–1874</span>
+            <div class="hito-dot-outer"></div>
+          </div>
+          <div class="hito-card">
+            <div class="hito-head">
+              <span class="hito-icon">🗣️</span>
+              <span class="hito-name">Áreas de Broca y Wernicke — lenguaje localizado</span>
+              <span class="hito-persona">Broca · Wernicke</span>
+            </div>
+            <p class="hito-desc">Paul Broca describió un paciente que comprendía el habla pero no podía producirla; la autopsia reveló lesión en el lóbulo frontal izquierdo. Primer respaldo empírico del localizacionismo funcional.</p>
+            <div class="hito-method-row">
+              <span class="method-pill">🔬 Lesiones post-mortem</span>
+              <span class="method-text">Correlacionaban déficit conductual con daño anatómico específico.</span>
+            </div>
+            <button class="hito-more-btn">🔍 Ver detalles</button>
+          </div>
+        </div>
+
+        <!-- HITO 2 -->
+        <div class="hito era-2" onclick="openModal(2)">
+          <div class="hito-marker">
+            <span class="hito-year">1888–1906</span>
+            <div class="hito-dot-outer"></div>
+          </div>
+          <div class="hito-card">
+            <div class="hito-head">
+              <span class="hito-icon">🧬</span>
+              <span class="hito-name">Doctrina neuronal — la célula como unidad</span>
+              <span class="hito-persona">Ramón y Cajal</span>
+            </div>
+            <p class="hito-desc">Usando la tinción de Golgi, Cajal demostró que el sistema nervioso está compuesto por células discretas (neuronas) que se comunican en sinapsis específicas. Nobel 1906.</p>
+            <div class="hito-method-row">
+              <span class="method-pill">🔭 Tinción argéntica</span>
+              <span class="method-text">Base celular de toda la neurociencia moderna.</span>
+            </div>
+            <button class="hito-more-btn">🔍 Ver detalles</button>
+          </div>
+        </div>
+
+        <!-- HITO 3 -->
+        <div class="hito era-3" onclick="openModal(3)">
+          <div class="hito-marker">
+            <span class="hito-year">1913–1950</span>
+            <div class="hito-dot-outer"></div>
+          </div>
+          <div class="hito-card">
+            <div class="hito-head">
+              <span class="hito-icon">⬛</span>
+              <span class="hito-name">Conductismo — la mente como caja negra</span>
+              <span class="hito-persona">Watson · Skinner</span>
+            </div>
+            <p class="hito-desc">El conductismo dominó la psicología rechazando el estudio de la mente interna. Paradójicamente, al excluir la cognición, preparó el terreno para la revolución cognitiva.</p>
+            <div class="hito-method-row">
+              <span class="method-pill">👁️ Observación conductual</span>
+              <span class="method-text">Los paradigmas E-R rigorizaron la metodología experimental.</span>
+            </div>
+            <button class="hito-more-btn">🔍 Ver detalles</button>
+          </div>
+        </div>
+
+        <!-- HITO 4 -->
+        <div class="hito era-4" onclick="openModal(4)">
+          <div class="hito-marker">
+            <span class="hito-year">1956–1967</span>
+            <div class="hito-dot-outer"></div>
+          </div>
+          <div class="hito-card">
+            <div class="hito-head">
+              <span class="hito-icon">💻</span>
+              <span class="hito-name">Revolución cognitiva — la mente como procesador</span>
+              <span class="hito-persona">Miller · Newell · Simon</span>
+            </div>
+            <p class="hito-desc">El simposio de Dartmouth (1956) y los trabajos de Miller sobre capacidad de memoria (7±2 elementos) inauguraron la metáfora computacional de la mente.</p>
+            <div class="hito-method-row">
+              <span class="method-pill">⏱️ Cronometría mental</span>
+              <span class="method-text">Tiempos de reacción para inferir procesos internos sin acceso directo al cerebro.</span>
+            </div>
+            <button class="hito-more-btn">🔍 Ver detalles</button>
+          </div>
+        </div>
+
+        <!-- HITO 5 -->
+        <div class="hito era-5" onclick="openModal(5)">
+          <div class="hito-marker">
+            <span class="hito-year">1978–1982</span>
+            <div class="hito-dot-outer"></div>
+          </div>
+          <div class="hito-card">
+            <div class="hito-head">
+              <span class="hito-icon">🚕</span>
+              <span class="hito-name">Fundación de la neurociencia cognitiva</span>
+              <span class="hito-persona">Gazzaniga · Miller</span>
+            </div>
+            <p class="hito-desc">Según la leyenda, el nombre "neurociencia cognitiva" surgió en el asiento trasero de un taxi en Nueva York. La Cognitive Neuroscience Society se fundó en 1992.</p>
+            <div class="hito-method-row">
+              <span class="method-pill">🧠 Cerebro escindido</span>
+              <span class="method-text">Estudios con pacientes comisurectomizados revelaron la especialización hemisférica.</span>
+            </div>
+            <button class="hito-more-btn">🔍 Ver detalles</button>
+          </div>
+        </div>
+
+        <!-- HITO 6 -->
+        <div class="hito era-6" onclick="openModal(6)">
+          <div class="hito-marker">
+            <span class="hito-year">1983–1995</span>
+            <div class="hito-dot-outer"></div>
+          </div>
+          <div class="hito-card">
+            <div class="hito-head">
+              <span class="hito-icon">📡</span>
+              <span class="hito-name">Neuroimagen — ventanas al cerebro vivo</span>
+              <span class="hito-persona">Posner · Raichle</span>
+            </div>
+            <p class="hito-desc">La tomografía por emisión de positrones (PET) y luego la fMRI permitieron por primera vez observar la actividad cerebral en tiempo real durante tareas cognitivas.</p>
+            <div class="hito-method-row">
+              <span class="method-pill">🖥️ PET · fMRI temprana</span>
+              <span class="method-text">La neuroimagen impulsó exponencialmente el conocimiento de la localización funcional.</span>
+            </div>
+            <button class="hito-more-btn">🔍 Ver detalles</button>
+          </div>
+        </div>
+
+        <!-- HITO 7 -->
+        <div class="hito era-7" onclick="openModal(7)">
+          <div class="hito-marker">
+            <span class="hito-year">2000–hoy</span>
+            <div class="hito-dot-outer"></div>
+          </div>
+          <div class="hito-card">
+            <div class="hito-head">
+              <span class="hito-icon">🕸️</span>
+              <span class="hito-name">Neuroplasticidad y conectómica — el cerebro como red</span>
+              <span class="hito-persona">Kandel · Sporns</span>
+            </div>
+            <p class="hito-desc">El proyecto Human Connectome (2010) y los estudios de plasticidad sináptica de Kandel (Nobel 2000) consolidaron la visión del cerebro como sistema dinámico de redes distribuidas.</p>
+            <div class="hito-method-row">
+              <span class="method-pill">🔗 fMRI · Tractografía DTI</span>
+              <span class="method-text">Cognición y aprendizaje emergen de redes interconectadas, no de módulos aislados.</span>
+            </div>
+            <button class="hito-more-btn">🔍 Ver detalles</button>
+          </div>
+        </div>
+
+      </div><!-- /timeline -->
+    </div>
+  </div><!-- /tab-historia -->
+
+  <!-- ============================================================ -->
+  <!-- TAB 2: MÉTODOS -->
+  <!-- ============================================================ -->
+  <div class="section-panel" id="tab-metodos">
+    <div class="panel-inner">
+      <div class="parte-badge-row">
+        <span class="parte-badge p1">Estado Actual</span>
+        <h2 class="parte-heading">Métodos modernos de estudio del cerebro</h2>
+      </div>
+
+      <div class="info-box ibox-teal reveal">
+        <span class="info-box-icon">🔭</span>
+        <div>
+          <div class="info-box-title">Importancia para la educación</div>
+          <div class="info-box-text">Estos métodos permiten diseñar entornos educativos más efectivos al comprender qué ocurre en el cerebro durante el aprendizaje, la atención y la memoria de trabajo.</div>
+        </div>
+      </div>
+
+      <div class="s-label">2 métodos modernos destacados</div>
+
+      <div class="methods-grid reveal">
+        <div class="method-card" onclick="openMethodModal('fmri')">
+          <div class="method-card-emoji">🧲</div>
+          <div class="method-badge-row">
+            <span class="mbadge mbadge-fmri">fMRI</span>
+            <span class="method-card-title">Resonancia magnética funcional</span>
+          </div>
+          <p class="method-card-desc">Detecta cambios en la oxigenación sanguínea (señal BOLD) para mapear qué regiones cerebrales se activan durante tareas cognitivas con resolución espacial de milímetros. Permite estudiar memoria, atención, lenguaje y emoción en tiempo real.</p>
+          <div class="method-ventaja ventaja-teal">✅ <strong>Ventaja principal:</strong> Alta resolución espacial — localiza con precisión de mm las redes neurales implicadas en aprendizaje.</div>
+          <button class="method-learn-btn">📖 Ampliar información</button>
+        </div>
+        <div class="method-card" onclick="openMethodModal('eeg')">
+          <div class="method-card-emoji">⚡</div>
+          <div class="method-badge-row">
+            <span class="mbadge mbadge-eeg">EEG</span>
+            <span class="method-card-title">Electroencefalografía</span>
+          </div>
+          <p class="method-card-desc">Registra la actividad eléctrica neuronal mediante electrodos en el cuero cabelludo con resolución temporal de milisegundos. Ideal para estudiar la dinámica oscilatoria del aprendizaje, atención sostenida y estados de flujo.</p>
+          <div class="method-ventaja ventaja-blue">✅ <strong>Ventaja principal:</strong> Alta resolución temporal — captura el curso preciso de los procesos cognitivos durante tareas de aprendizaje.</div>
+          <button class="method-learn-btn">📖 Ampliar información</button>
+        </div>
+      </div>
+
+      <!-- Comparison table -->
+      <div class="s-label" style="margin-top:24px">Tabla comparativa fMRI vs EEG</div>
+      <div class="reveal" style="overflow-x:auto;">
+        <table style="width:100%;border-collapse:collapse;font-size:12px;">
+          <thead>
+            <tr style="background:var(--gray-light);">
+              <th style="padding:10px 12px;text-align:left;color:var(--text-3);font-weight:600;font-size:10px;letter-spacing:1px;text-transform:uppercase;">Criterio</th>
+              <th style="padding:10px 12px;text-align:center;color:var(--teal);font-weight:600;">🧲 fMRI</th>
+              <th style="padding:10px 12px;text-align:center;color:var(--blue);font-weight:600;">⚡ EEG</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr style="border-bottom:1px solid var(--border);">
+              <td style="padding:10px 12px;color:var(--text-2);">Resolución espacial</td>
+              <td style="padding:10px 12px;text-align:center;background:var(--teal-light);color:var(--teal);font-weight:500;">⭐⭐⭐ Alta (mm)</td>
+              <td style="padding:10px 12px;text-align:center;color:var(--text-3);">⭐ Baja (cm)</td>
+            </tr>
+            <tr style="border-bottom:1px solid var(--border);background:#FAFAF8;">
+              <td style="padding:10px 12px;color:var(--text-2);">Resolución temporal</td>
+              <td style="padding:10px 12px;text-align:center;color:var(--text-3);">⭐ Baja (seg)</td>
+              <td style="padding:10px 12px;text-align:center;background:var(--blue-light);color:var(--blue);font-weight:500;">⭐⭐⭐ Alta (ms)</td>
+            </tr>
+            <tr style="border-bottom:1px solid var(--border);">
+              <td style="padding:10px 12px;color:var(--text-2);">Portabilidad</td>
+              <td style="padding:10px 12px;text-align:center;color:var(--text-3);">❌ Muy baja</td>
+              <td style="padding:10px 12px;text-align:center;background:var(--blue-light);color:var(--blue);font-weight:500;">✅ Alta</td>
+            </tr>
+            <tr style="border-bottom:1px solid var(--border);background:#FAFAF8;">
+              <td style="padding:10px 12px;color:var(--text-2);">Costo</td>
+              <td style="padding:10px 12px;text-align:center;color:var(--coral);">💰 Muy alto</td>
+              <td style="padding:10px 12px;text-align:center;color:var(--teal);">💰 Moderado</td>
+            </tr>
+            <tr>
+              <td style="padding:10px 12px;color:var(--text-2);">Uso en educación</td>
+              <td style="padding:10px 12px;text-align:center;color:var(--text-3);">Laboratorio</td>
+              <td style="padding:10px 12px;text-align:center;background:var(--teal-light);color:var(--teal);font-weight:500;">✅ Aula / virtual</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="info-box ibox-purple reveal" style="margin-top:16px;">
+        <span class="info-box-icon">🏫</span>
+        <div>
+          <div class="info-box-title">Aplicación en educación a distancia</div>
+          <div class="info-box-text">El EEG portátil permite monitorear la carga cognitiva, el nivel de atención y los estados de flujo durante sesiones de aprendizaje en línea — información invaluable para ajustar el ritmo y diseño instruccional en tiempo real.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============================================================ -->
+  <!-- TAB 3: DEBATE TEÓRICO -->
+  <!-- ============================================================ -->
+  <div class="section-panel" id="tab-debate">
+    <div class="panel-inner">
+      <div class="parte-badge-row">
+        <span class="parte-badge p2">Parte 2</span>
+        <h2 class="parte-heading">Posición crítica y debate teórico — El argumento</h2>
+      </div>
+
+      <div class="s-label">Elección de tendencia teórica</div>
+
+      <div class="tendencia-grid reveal">
+        <div class="tend-card selected" onclick="openTendModal('dinamicista')">
+          <div class="tend-icon">🕸️</div>
+          <p class="tend-label-badge lbl-selected">✓ Tendencia elegida</p>
+          <p class="tend-name">Dinamicista / Conexionista</p>
+          <p class="tend-desc">El cerebro funciona como sistema de redes distribuidas y dinámicas. El conocimiento emerge de patrones de activación entre neuronas interconectadas, no de módulos localizados. La plasticidad sináptica y la conectividad son el sustrato del aprendizaje.</p>
+          <span class="tend-chosen-badge">✅ Posición del grupo</span>
+        </div>
+        <div class="tend-card alt" onclick="openTendModal('localizacionista')">
+          <div class="tend-icon">📍</div>
+          <p class="tend-label-badge lbl-alt">Tendencia alternativa</p>
+          <p class="tend-name">Localizacionista / Modulista</p>
+          <p class="tend-desc">Funciones cognitivas específicas están confinadas a regiones cerebrales delimitadas. Cada módulo procesa información de forma encapsulada. Base histórica: Broca, Wernicke, Brodmann.</p>
+          <button class="tend-compare-btn">↔️ Comparar perspectivas</button>
+        </div>
+      </div>
+
+      <!-- Debate visual -->
+      <div class="s-label">El gran debate: ¿Dónde reside la mente?</div>
+      <div class="debate-bar reveal">
+        <div class="debate-side debate-d">
+          <div class="debate-side-head">🕸️ Visión Distribuida</div>
+          La cognición emerge de la interacción dinámica de redes distribuidas. El aprendizaje modifica patrones de conectividad en múltiples regiones simultáneamente.
+        </div>
+        <div class="debate-vs">VS</div>
+        <div class="debate-side debate-l">
+          <div class="debate-side-head">📍 Visión Localizada</div>
+          Funciones específicas como el lenguaje, la memoria o el reconocimiento visual residen en regiones cerebrales delimitadas y especializadas.
+        </div>
+      </div>
+
+      <!-- Argumentos -->
+      <div class="s-label">Justificación crítica — 3 argumentos clave</div>
+      <div class="arg-grid reveal">
+        <div class="arg-card" onclick="openArgModal(0)">
+          <div class="arg-icon">🌐</div>
+          <div class="arg-num">01</div>
+          <p class="arg-title">Aprendizaje como red distribuida</p>
+          <p class="arg-text">En entornos virtuales, el aprendizaje activa simultáneamente redes atencionales, lingüísticas, memorísticas y ejecutivas.</p>
+          <button class="hito-more-btn" style="margin-top:8px;">→ Ampliar</button>
+        </div>
+        <div class="arg-card" onclick="openArgModal(1)">
+          <div class="arg-icon">🔄</div>
+          <div class="arg-num">02</div>
+          <p class="arg-title">Neuroplasticidad y personalización</p>
+          <p class="arg-text">La visión dinamicista justifica diseñar cursos en línea con retroalimentación iterativa y repetición espaciada.</p>
+          <button class="hito-more-btn" style="margin-top:8px;">→ Ampliar</button>
+        </div>
+        <div class="arg-card" onclick="openArgModal(2)">
+          <div class="arg-icon">🔗</div>
+          <div class="arg-num">03</div>
+          <p class="arg-title">Integración: conectivismo educativo</p>
+          <p class="arg-text">El conexionismo neuronal converge con el conectivismo de Siemens (2004): el conocimiento reside en redes de nodos.</p>
+          <button class="hito-more-btn" style="margin-top:8px;">→ Ampliar</button>
+        </div>
+      </div>
+
+      <!-- Conexionismo-Educación link -->
+      <div class="info-box ibox-coral reveal">
+        <span class="info-box-icon">⚠️</span>
+        <div>
+          <div class="info-box-title">Limitación crítica a considerar</div>
+          <div class="info-box-text">La perspectiva dinamicista/conexionista, aunque más integradora, puede subestimar el valor diagnóstico de los mapeos localizados (p.ej., en dislexia o TDAH), donde la identificación de regiones específicas sigue siendo clínicamente útil.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============================================================ -->
+  <!-- TAB 4: QUIZ -->
+  <!-- ============================================================ -->
+  <div class="section-panel" id="tab-quiz">
+    <div class="panel-inner">
+      <div class="parte-badge-row">
+        <span class="parte-badge" style="background:var(--amber);">Autoevaluación</span>
+        <h2 class="parte-heading">Pon a prueba lo aprendido</h2>
+      </div>
+
+      <div class="info-box ibox-yellow">
+        <span class="info-box-icon">🎯</span>
+        <div>
+          <div class="info-box-title">¿Cómo funciona?</div>
+          <div class="info-box-text">5 preguntas de opción múltiple sobre el contenido de esta infografía. Recibirás retroalimentación inmediata y explicación de cada respuesta.</div>
+        </div>
+      </div>
+
+      <div class="quiz-wrap">
+        <div class="quiz-header">
+          <span class="quiz-badge">🧩 Quiz</span>
+          <span class="quiz-title">Neurociencia Cognitiva · 5 preguntas</span>
+        </div>
+        <div class="quiz-progress" id="quizProgress"></div>
+        <p class="quiz-question" id="quizQuestion"></p>
+        <div class="quiz-options" id="quizOptions"></div>
+        <div class="quiz-feedback" id="quizFeedback"></div>
+        <button class="quiz-next-btn" id="quizNext" onclick="nextQuestion()">Siguiente pregunta →</button>
+        <div id="quizScore" style="display:none;text-align:center;padding:16px 0;">
+          <div style="font-family:'Fraunces',serif;font-size:36px;font-weight:900;color:var(--purple);" id="scoreDisplay"></div>
+          <div style="font-size:13px;color:var(--text-2);margin-top:4px;" id="scoreFeedback"></div>
+          <button onclick="restartQuiz()" style="margin-top:14px;background:var(--purple);color:#fff;border:none;padding:10px 20px;border-radius:8px;cursor:pointer;font-size:12px;font-weight:500;">🔄 Reintentar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============================================================ -->
+  <!-- TAB 5: REFERENCIAS -->
+  <!-- ============================================================ -->
+  <div class="section-panel" id="tab-refs">
+    <div class="panel-inner">
+      <div class="parte-badge-row">
+        <span class="parte-badge" style="background:var(--gray);">Referencias</span>
+        <h2 class="parte-heading">Bibliografía — APA 7ª Edición</h2>
+      </div>
+
+      <div class="info-box ibox-purple reveal">
+        <span class="info-box-icon">📚</span>
+        <div>
+          <div class="info-box-title">10 fuentes académicas citadas</div>
+          <div class="info-box-text">Todas las referencias siguen el formato APA 7ª edición. Las fuentes con DOI pueden accederse haciendo clic en el enlace.</div>
+        </div>
+      </div>
+
+      <div class="refs-section reveal">
+        <div class="refs-head">
+          📖 Referencias bibliográficas <span class="refs-badge">10 fuentes</span>
+        </div>
+
+        <div class="ref-item"><div class="ref-num">1</div><div>Escera, C. (2004). Aproximación histórica y conceptual a la Neurociencia Cognitiva. <em>Cognitiva, 16</em>(2), 141–162. <a class="ref-doi" href="https://doi.org/10.1174/0214355042248929" target="_blank">https://doi.org/10.1174/0214355042248929</a></div></div>
+
+        <div class="ref-item"><div class="ref-num">2</div><div>Sierra-Fitzgerald, O., &amp; Munévar, G. (2007). Nuevas ventanas hacia el cerebro humano y su impacto en la neurociencia cognoscitiva. <em>Revista Latinoamericana de Psicología, 39</em>(1), 143–157. <a class="ref-doi" href="http://www.scielo.org.co/scielo.php?script=sci_arttext&pid=S0120-05342007000100010" target="_blank">Ver en SciELO</a></div></div>
+
+        <div class="ref-item"><div class="ref-num">3</div><div>Ripoll, D. R., Adrover-Roig, D., &amp; Rodríguez, M. P. A. (2023). <em>Neurociencia cognitiva.</em> Editorial Médica Panamericana.</div></div>
+
+        <div class="ref-item"><div class="ref-num">4</div><div>Echavarria Ramírez, L. (2022). <em>Neurociencias.</em> Universidad San Ignacio de Loyola, Fondo Editorial. <a class="ref-doi" href="https://repositorio.usil.edu.pe/entities/publication/a6b0f9aa-3fd5-46e2-bb32-50129dbc2203" target="_blank">Ver repositorio USIL</a></div></div>
+
+        <div class="ref-item"><div class="ref-num">5</div><div>Venturelli, A. N., &amp; Branca, I. (2016). Evidencia y neurociencias cognitivas: El caso de la resonancia magnética funcional. <em>Tópicos (México), 50</em>, 177–207. <a class="ref-doi" href="http://www.scielo.org.mx/scielo.php?script=sci_arttext&pid=S0188-66492016000100008" target="_blank">Ver en SciELO México</a></div></div>
+
+        <div class="ref-item"><div class="ref-num">6</div><div>Gazzaniga, M. S., Ivry, R. B., &amp; Mangun, G. R. (2019). <em>Cognitive neuroscience: The biology of the mind</em> (5.ª ed.). W. W. Norton &amp; Company.</div></div>
+
+        <div class="ref-item"><div class="ref-num">7</div><div>Poeppel, D., Mangun, G. R., &amp; Gazzaniga, M. S. (Eds.). (2020). <em>The cognitive neurosciences</em> (6.ª ed.). MIT Press.</div></div>
+
+        <div class="ref-item"><div class="ref-num">8</div><div>Miramontes-Arteaga, M. A., Viramontes-Anaya, M. A., &amp; Salmerón-Leal, J. G. (2019). Teorías de la enseñanza a distancia. <em>Revista Tecnológica-Educativa Docentes 2.0, 13</em>(2), 37–48. <a class="ref-doi" href="https://ojs.docentes20.com/index.php/revista-docentes20/article/view/293" target="_blank">Ver artículo</a></div></div>
+
+        <div class="ref-item"><div class="ref-num">9</div><div>García Martínez, A. (s.f.). Modelos pedagógicos y teorías del aprendizaje en la educación a distancia. <em>Apertura.</em> <a class="ref-doi" href="http://www.udgvirtual.udg.mx/apertura/index.php/apertura/article/view/205/220" target="_blank">Ver artículo</a></div></div>
+
+        <div class="ref-item"><div class="ref-num">10</div><div>Frontera de la Investigación en Educación. (2024). Neuroeducación: Comprensión de la dinámica neural en el aprendizaje y la enseñanza. <em>Frontiers in Education, 9</em>. <a class="ref-doi" href="https://doi.org/10.3389/feduc.2024.1437418" target="_blank">https://doi.org/10.3389/feduc.2024.1437418</a></div></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <div class="footer-band">
+    <span>🎓 <strong>VNS6032</strong> · Neurociencia Cognitiva y Educación · Broward International University</span>
+    <span>Semanas 2–3 · Asignación #2 · APA 7ª edición</span>
+  </div>
+
+</div><!-- /infografia -->
+
+<!-- ============================================================ -->
+<!-- MODAL -->
+<!-- ============================================================ -->
+<div class="modal-overlay" id="modalOverlay" onclick="closeModal(event)">
+  <div class="modal" id="modalBox">
+    <div class="modal-header">
+      <span class="modal-icon" id="mIcon"></span>
+      <span class="modal-title" id="mTitle"></span>
+      <button class="modal-close" onclick="closeModalDirect()">✕</button>
+    </div>
+    <div class="modal-body" id="mBody"></div>
+  </div>
+</div>
+
+<script>
+// ── DATA ──
+const hitos = [
+  {
+    icon:'🗺️', year:'1796–1815', name:'Frenología de Gall — primeros mapas cerebrales',
+    persona:'Franz Joseph Gall & Johann Spurzheim',
+    desc:`Franz Joseph Gall postuló que cada región del cráneo correspondía a una función mental específica, inaugurando el debate sobre la localización funcional del cerebro. Aunque pseudocientífica, la frenología sembró la hipótesis fundamental de que la mente reside en el encéfalo.`,
+    metodo:'Palpación craneal e inspección morfológica del cráneo',
+    limitacion:'La falta de rigor empírico limitó el avance, pero forzó a la ciencia a preguntarse por la relación mente-cerebro de forma sistemática.',
+    impacto_edu:'Sentó la premisa de que el sustrato físico del cerebro determina las capacidades mentales, base para las neurociencias educativas actuales.',
+    curiosidad:'Gall coleccionaba cráneos de personas con habilidades notables para "validar" su teoría — tenía más de 300 especímenes.'
+  },
+  {
+    icon:'🗣️', year:'1861–1874', name:'Áreas de Broca y Wernicke — lenguaje localizado',
+    persona:'Paul Broca & Carl Wernicke',
+    desc:`Paul Broca describió en 1861 a un paciente que comprendía el habla pero no podía producirla; la autopsia reveló una lesión en el lóbulo frontal izquierdo (área de Broca). Carl Wernicke identificó en 1874 el área de comprensión. Fue el primer respaldo empírico sólido del localizacionismo funcional.`,
+    metodo:'Lesiones post-mortem: correlación de déficit conductual con daño anatómico específico observable en la autopsia.',
+    limitacion:'El método limitaba el estudio al cerebro dañado, no al funcionamiento normal, y no podía observar la actividad cerebral en tiempo real.',
+    impacto_edu:'Demostró que regiones específicas median funciones cognitivas concretas — fundamento para entender trastornos del lenguaje como dislexia y afasia en contextos educativos.',
+    curiosidad:'El paciente de Broca, "Tan" (llamado así porque era la única sílaba que podía pronunciar), vivió 21 años con la lesión antes de ser estudiado.'
+  },
+  {
+    icon:'🧬', year:'1888–1906', name:'Doctrina neuronal — la célula como unidad',
+    persona:'Santiago Ramón y Cajal',
+    desc:`Usando la tinción de Golgi modificada, Cajal demostró que el sistema nervioso no es un retículo continuo (como creía Golgi) sino que está compuesto por células discretas — las neuronas — que se comunican en sinapsis específicas. Recibió el Premio Nobel en 1906, compartido con el propio Golgi.`,
+    metodo:'Tinción argéntica (método de Golgi) y microscopía histológica de alta precisión.',
+    limitacion:'La microscopía seguía siendo el estudio estático de tejido muerto, sin acceso al cerebro vivo ni a su actividad funcional.',
+    impacto_edu:'La doctrina neuronal es la base celular de toda la neurociencia moderna. El concepto de plasticidad sináptica (Hebb, 1949) parte directamente de este descubrimiento.',
+    curiosidad:'Cajal era también un apasionado fotógrafo y artista — sus dibujos de neuronas son tan precisos que siguen usándose en textos científicos hoy.'
+  },
+  {
+    icon:'⬛', year:'1913–1950', name:'Conductismo — la mente como caja negra',
+    persona:'John B. Watson & B.F. Skinner',
+    desc:`El conductismo dominó la psicología rechazando el estudio de los procesos mentales internos; solo interesaba el comportamiento observable. Paradójicamente, al excluir la cognición, preparó el terreno para la revolución cognitiva que lo reemplazaría décadas después.`,
+    metodo:'Observación conductual rigurosa, paradigmas estímulo-respuesta (E-R) y condicionamiento operante en laboratorio.',
+    limitacion:'Negaba la relevancia del sustrato neural para explicar el aprendizaje, reduciendo al aprendiz a un mecanismo pasivo de respuestas.',
+    impacto_edu:'Los principios de refuerzo y condicionamiento siguen vigentes en el diseño instruccional: retroalimentación inmediata, repetición y refuerzo positivo en plataformas e-learning.',
+    curiosidad:'Skinner diseñó "máquinas de enseñanza" en la década de 1950 — precursoras directas de los sistemas de aprendizaje adaptativo actuales.'
+  },
+  {
+    icon:'💻', year:'1956–1967', name:'Revolución cognitiva — la mente como procesador',
+    persona:'George Miller · Allen Newell · Herbert Simon',
+    desc:`El simposio de Dartmouth (1956) y los trabajos de Miller sobre capacidad de memoria (7±2 elementos) inauguraron la metáfora computacional de la mente. La cognición recuperó legitimidad científica y se abrió el diálogo con la neurociencia. La psicología cognitiva nació como campo independiente.`,
+    metodo:'Cronometría mental: inferir procesos mentales internos mediante tiempos de reacción y paradigmas de tareas cognitivas.',
+    limitacion:'La metáfora computacional redujo el cerebro a un procesador secuencial, ignorando la naturaleza paralela, emocional y encarnada de la cognición.',
+    impacto_edu:'La revolución cognitiva fundamentó el diseño instruccional moderno: carga cognitiva, memoria de trabajo, esquemas y procesamiento dual.',
+    curiosidad:'El artículo de Miller "The Magical Number Seven, Plus or Minus Two" (1956) sigue siendo uno de los más citados en la historia de la psicología.'
+  },
+  {
+    icon:'🚕', year:'1978–1982', name:'Fundación de la neurociencia cognitiva',
+    persona:'Michael Gazzaniga & George Miller',
+    desc:`Según la leyenda académica, el nombre "neurociencia cognitiva" surgió espontáneamente en el asiento trasero de un taxi en Nueva York, cuando Gazzaniga y George Miller se dirigían a una cena con colegas. La Cognitive Neuroscience Society se fundó formalmente en 1992.`,
+    metodo:'Estudios de "cerebro escindido" con pacientes comisurectomizados que revelaron la especialización hemisférica, fusionando neurología y psicología cognitiva.',
+    limitacion:'Los estudios de lesión siguen siendo el "experimento natural" del cerebro — potentes pero limitados por la variabilidad individual y la imposibilidad de control experimental.',
+    impacto_edu:'La especialización hemisférica informó décadas de pedagogía (aunque el "mito del cerebro izquierdo/derecho" fue sobreinterpretado). El campo integrador sentó las bases de la neuroeducación.',
+    curiosidad:'El paciente más famoso de Gazzaniga, "W.J.", podía dibujar con la mano izquierda objetos que solo veía con el hemisferio derecho, pero no podía nominarlos verbalmente.'
+  },
+  {
+    icon:'📡', year:'1983–1995', name:'Neuroimagen — ventanas al cerebro vivo',
+    persona:'Michael Posner & Marcus Raichle',
+    desc:`La tomografía por emisión de positrones (PET) y luego la fMRI permitieron por primera vez observar la actividad cerebral en tiempo real durante tareas cognitivas. Posner utilizó la sustracción de Donders para aislar módulos específicos de procesamiento.`,
+    metodo:'PET y fMRI temprana: detección de flujo sanguíneo cerebral diferencial durante tareas cognitivas. La sustracción de Donders aísla el componente de interés.',
+    limitacion:'Baja resolución temporal y alto costo, limitando los estudios a contextos de laboratorio controlado, lejos de entornos naturalistas de aprendizaje.',
+    impacto_edu:'La neuroimagen identificó las redes cerebrales del aprendizaje (red de modo por defecto, red frontoparietal de control) que informan el diseño de materiales educativos cognitivamente óptimos.',
+    curiosidad:'Raichle descubrió que el cerebro consume el 20% de la energía corporal incluso en reposo — lo que llevó al descubrimiento de la "red de modo por defecto", activa cuando no hacemos nada consciente.'
+  },
+  {
+    icon:'🕸️', year:'2000–hoy', name:'Neuroplasticidad y conectómica — el cerebro como red',
+    persona:'Eric Kandel & Olaf Sporns',
+    desc:`El proyecto Human Connectome (2010) y los estudios de plasticidad sináptica de Kandel (Nobel 2000) consolidaron la visión del cerebro como sistema dinámico de redes distribuidas, superando el debate localizacionismo-holismo hacia modelos integrativos.`,
+    metodo:'fMRI de alta resolución y tractografía DTI para mapear conectividad estructural y funcional a escala de todo el cerebro.',
+    limitacion:'El volumen de datos del conectoma es astronómico (el cerebro tiene ~100 billones de sinapsis), requiriendo inteligencia artificial para el análisis.',
+    impacto_edu:'La neuroplasticidad confirma que el aprendizaje cambia físicamente el cerebro — justificación neurocientífica sólida para la educación continua, la intervención temprana y la neuroeducación.',
+    curiosidad:'Kandel estudió el mecanismo de la memoria en Aplysia californica — un caracol marino con solo 20,000 neuronas — y sus hallazgos se aplicaron directamente a la comprensión del aprendizaje humano.'
+  }
+];
+
+const argumentos = [
+  {
+    icon:'🌐', num:'01', title:'Aprendizaje como red distribuida',
+    text:`En entornos virtuales, el aprendizaje no ocurre en un módulo aislado: activa simultáneamente redes atencionales, lingüísticas, memorísticas y ejecutivas. El conexionismo explica cómo los foros, videos y actividades asíncronas construyen conocimiento mediante activación distribuida y refuerzo sináptico.`,
+    aplicacion:'En un foro de discusión en línea, el aprendiz activa simultáneamente la red de lenguaje (Broca/Wernicke), la red ejecutiva prefrontal (planificación del argumento) y las áreas de memoria episódica (experiencias previas). Esto justifica el diseño de actividades que integren múltiples modalidades.',
+    evidencia:'Sporns (2010) demostró mediante el Human Connectome que incluso tareas simples activan docenas de regiones cerebrales en patrones coordinados.'
+  },
+  {
+    icon:'🔄', num:'02', title:'Neuroplasticidad y personalización virtual',
+    text:`La visión dinamicista reconoce que las redes neurales se reorganizan con la experiencia (plasticidad). Esto justifica diseñar cursos en línea con retroalimentación iterativa, repetición espaciada y aprendizaje activo — estrategias que modifican conexiones sinápticas de manera duradera.`,
+    aplicacion:'La repetición espaciada (spaced repetition) y el aprendizaje activo tienen correlatos neurales directos: la potenciación a largo plazo (LTP) que fortalece sinapsis específicas. Las plataformas como Anki o los sistemas adaptativos explotan este principio.',
+    evidencia:'Kandel (2001) demostró que la memoria a largo plazo requiere síntesis proteica y cambios estructurales en las sinapsis — lo cual solo ocurre con práctica distribuida, no concentrada.'
+  },
+  {
+    icon:'🔗', num:'03', title:'Integración conceptual: conectivismo educativo',
+    text:`El conexionismo neuronal converge con el conectivismo de Siemens (2004): el conocimiento reside en redes de nodos (personas, recursos, plataformas). En educación a distancia, el aprendiz construye redes cognitivas y sociales simultáneamente, reflejando la arquitectura distribuida del cerebro.`,
+    aplicacion:'Un estudiante en línea que conecta con pares, tutores, bases de datos, videos y foros está construyendo simultáneamente una red social de conocimiento y una red neural de comprensión. La teoría conectivista de Siemens es, en cierto sentido, una metáfora del funcionamiento cerebral.',
+    evidencia:'Siemens (2004) propuso el conectivismo como la teoría del aprendizaje para la era digital, convergente con los hallazgos de la neurociencia de redes de Sporns y Bullmore (2009).'
+  }
+];
+
+const quizData = [
+  {
+    q:'¿Qué científico demostró que el sistema nervioso está compuesto por células discretas llamadas neuronas, por lo que recibió el Nobel en 1906?',
+    opts:['Franz Joseph Gall','Paul Broca','Santiago Ramón y Cajal','Carl Wernicke'],
+    correct:2,
+    fb:'✅ Correcto. Cajal usó la tinción argéntica (método de Golgi) para demostrar la doctrina neuronal, base de toda la neurociencia moderna.'
+  },
+  {
+    q:'¿Cuál es la principal VENTAJA del EEG sobre la fMRI para estudios en contextos educativos?',
+    opts:['Mayor resolución espacial','Mayor resolución temporal y portabilidad','Menor costo por sesión','Mayor profundidad de penetración'],
+    correct:1,
+    fb:'✅ Correcto. El EEG tiene resolución temporal de milisegundos y puede usarse con hardware portátil en entornos naturalistas como el aula virtual.'
+  },
+  {
+    q:'Según la leyenda académica, ¿dónde surgió el nombre "neurociencia cognitiva"?',
+    opts:['En el laboratorio de MIT','En el simposio de Dartmouth','En el asiento trasero de un taxi en Nueva York','En el congreso anual de la APA'],
+    correct:2,
+    fb:'✅ Correcto. Gazzaniga y George Miller acuñaron el término mientras se dirigían a una cena con colegas en un taxi neoyorquino.'
+  },
+  {
+    q:'¿Qué tendencia teórica adopta el grupo como posición crítica y por qué se aplica mejor a la educación a distancia?',
+    opts:['Localizacionista, porque permite diagnosticar regiones específicas','Frenológica, por su larga historia','Dinamicista/Conexionista, porque el aprendizaje activa redes distribuidas simultáneas','Conductista, por sus técnicas de refuerzo'],
+    correct:2,
+    fb:'✅ Correcto. El enfoque dinamicista/conexionista explica cómo el aprendizaje virtual activa redes atencionales, lingüísticas y memorísticas de forma simultánea.'
+  },
+  {
+    q:'¿Cuál de los siguientes proyectos consolidó la visión del cerebro como sistema de redes distribuidas en el siglo XXI?',
+    opts:['Proyecto Genoma Humano','Human Connectome Project (2010)','Simposio de Dartmouth (1956)','Cognitive Neuroscience Society (1992)'],
+    correct:1,
+    fb:'✅ Correcto. El Human Connectome Project mapeó la conectividad estructural y funcional del cerebro humano a escala completa, usando fMRI y tractografía DTI.'
+  }
+];
+
+let currentQ = 0, score = 0, answered = false;
+
+// ── TABS ──
+function showTab(name) {
+  document.querySelectorAll('.section-panel').forEach(p=>p.classList.remove('active'));
+  document.querySelectorAll('.nav-tab').forEach(t=>t.classList.remove('active'));
+  document.getElementById('tab-'+name).classList.add('active');
+  event.currentTarget.classList.add('active');
+  triggerReveal();
+  if(name==='quiz') initQuiz();
+}
+
+// ── PROGRESS ──
+window.addEventListener('scroll',()=>{
+  const el=document.querySelector('.infografia');
+  const scrolled=window.scrollY;
+  const total=el.offsetHeight-window.innerHeight;
+  const pct=Math.min(100,Math.round((scrolled/Math.max(total,1))*100));
+  document.getElementById('progressFill').style.width=pct+'%';
+  document.getElementById('progressPct').textContent=pct+'%';
+});
+
+// ── REVEAL ──
+function triggerReveal(){
+  setTimeout(()=>{
+    document.querySelectorAll('.reveal').forEach(el=>{
+      const rect=el.getBoundingClientRect();
+      if(rect.top<window.innerHeight+50)el.classList.add('visible');
+    });
+  },50);
+}
+window.addEventListener('scroll',triggerReveal);
+window.addEventListener('load',()=>{triggerReveal();animateCounters();initQuiz();});
+
+// ── COUNTERS ──
+function animateCounters(){
+  document.querySelectorAll('[data-target]').forEach(el=>{
+    const target=+el.dataset.target;
+    let cur=0;const step=Math.ceil(target/30);
+    const t=setInterval(()=>{cur=Math.min(cur+step,target);el.textContent=cur;if(cur>=target)clearInterval(t);},40);
+  });
+}
+
+// ── MODAL HITOS ──
+function openModal(idx){
+  const h=hitos[idx];
+  document.getElementById('mIcon').textContent=h.icon;
+  document.getElementById('mTitle').textContent=h.name;
+  document.getElementById('mBody').innerHTML=`
+    <div class="modal-persona-row">
+      <span class="modal-persona-badge">👤 ${h.persona}</span>
+      <span class="modal-year">📅 ${h.year}</span>
+    </div>
+    <div class="modal-section">
+      <div class="modal-section-title">Contexto histórico</div>
+      <p class="modal-text">${h.desc}</p>
+    </div>
+    <div class="modal-section">
+      <div class="modal-section-title">Método científico</div>
+      <span class="modal-pill">🔬 ${h.metodo}</span>
+      <p class="modal-text" style="margin-top:4px">${h.limitacion}</p>
+    </div>
+    <div class="modal-impact">
+      <div class="modal-impact-title">🏫 Impacto en educación</div>
+      ${h.impacto_edu}
+    </div>
+    <div class="info-box ibox-yellow" style="margin-top:12px">
+      <span class="info-box-icon">💡</span>
+      <div>
+        <div class="info-box-title">Dato curioso</div>
+        <div class="info-box-text">${h.curiosidad}</div>
+      </div>
+    </div>
+  `;
+  document.getElementById('modalOverlay').classList.add('open');
+  document.body.style.overflow='hidden';
+}
+
+function openMethodModal(type){
+  if(type==='fmri'){
+    document.getElementById('mIcon').textContent='🧲';
+    document.getElementById('mTitle').textContent='fMRI — Resonancia Magnética Funcional';
+    document.getElementById('mBody').innerHTML=`
+      <div class="modal-section">
+        <div class="modal-section-title">¿Cómo funciona?</div>
+        <p class="modal-text">La fMRI detecta cambios en la oxigenación sanguínea (señal BOLD — Blood-Oxygen-Level-Dependent) para mapear qué regiones cerebrales se activan durante tareas cognitivas con resolución espacial de milímetros. El principio físico es la resonancia magnética: el campo magnético alinea los protones de hidrógeno, y las variaciones de oxigenación generan señales detectables.</p>
+      </div>
+      <div class="modal-section">
+        <div class="modal-section-title">Especificaciones técnicas</div>
+        <div class="info-box ibox-teal">
+          <span class="info-box-icon">📊</span>
+          <div>
+            <div class="info-box-title">Resolución espacial: ~1–3 mm</div>
+            <div class="info-box-text">Resolución temporal: 1–2 segundos (limitado por la respuesta hemodinámica). Campo magnético: 1.5T a 7T.</div>
+          </div>
+        </div>
+      </div>
+      <div class="modal-impact">
+        <div class="modal-impact-title">🏫 Aplicación educativa</div>
+        Permite identificar las redes neurales del aprendizaje de lectura, matemáticas y razonamiento lógico, orientando el diseño de materiales y secuencias didácticas.
+      </div>
+    `;
+  } else {
+    document.getElementById('mIcon').textContent='⚡';
+    document.getElementById('mTitle').textContent='EEG — Electroencefalografía';
+    document.getElementById('mBody').innerHTML=`
+      <div class="modal-section">
+        <div class="modal-section-title">¿Cómo funciona?</div>
+        <p class="modal-text">El EEG registra la actividad eléctrica neuronal mediante electrodos colocados en el cuero cabelludo con resolución temporal de milisegundos. Mide las oscilaciones de potencial eléctrico generadas por la actividad sincronizada de millones de neuronas.</p>
+      </div>
+      <div class="modal-section">
+        <div class="modal-section-title">Bandas de frecuencia y su significado</div>
+        <div class="info-box ibox-purple">
+          <span class="info-box-icon">🌊</span>
+          <div>
+            <div class="info-box-title">Bandas cerebrales clave</div>
+            <div class="info-box-text">
+              🔵 Delta (0.5–4Hz): sueño profundo<br>
+              🟣 Theta (4–8Hz): memoria de trabajo, creatividad<br>
+              🟡 Alpha (8–12Hz): relajación, atención difusa<br>
+              🟠 Beta (12–30Hz): pensamiento activo, concentración<br>
+              🔴 Gamma (30–100Hz): procesamiento complejo, aprendizaje
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal-impact">
+        <div class="modal-impact-title">🏫 Aplicación en e-learning</div>
+        El EEG portátil puede detectar fatiga cognitiva, niveles de atención y carga de trabajo en sesiones virtuales, permitiendo ajustar el ritmo instruccional en tiempo real.
+      </div>
+    `;
+  }
+  document.getElementById('modalOverlay').classList.add('open');
+  document.body.style.overflow='hidden';
+}
+
+function openTendModal(tipo){
+  if(tipo==='dinamicista'){
+    document.getElementById('mIcon').textContent='🕸️';
+    document.getElementById('mTitle').textContent='Perspectiva Dinamicista / Conexionista';
+    document.getElementById('mBody').innerHTML=`
+      <div class="modal-section">
+        <div class="modal-section-title">Fundamentos teóricos</div>
+        <p class="modal-text">El cerebro funciona como un sistema de redes distribuidas y dinámicas. El conocimiento no está almacenado en un lugar específico sino que emerge de patrones de activación entre neuronas interconectadas. La plasticidad sináptica (potenciación a largo plazo, LTP) es el mecanismo celular del aprendizaje.</p>
+      </div>
+      <div class="info-box ibox-teal">
+        <span class="info-box-icon">📖</span>
+        <div>
+          <div class="info-box-title">Referentes principales</div>
+          <div class="info-box-text">Kandel (plasticidad sináptica), Sporns (conectómica), Rumelhart & McClelland (redes conexionistas), Siemens (conectivismo educativo), Human Connectome Project.</div>
+        </div>
+      </div>
+      <div class="modal-impact">
+        <div class="modal-impact-title">🏫 Por qué elegimos esta perspectiva</div>
+        En educación a distancia, el aprendizaje activa simultáneamente redes atencionales, lingüísticas, memorísticas y ejecutivas. El diseño instruccional basado en redes (retroalimentación iterativa, espaciado, aprendizaje activo) tiene correlatos neurales directos en la LTP y la plasticidad sináptica.
+      </div>
+    `;
+  } else {
+    document.getElementById('mIcon').textContent='📍';
+    document.getElementById('mTitle').textContent='Perspectiva Localizacionista / Modulista';
+    document.getElementById('mBody').innerHTML=`
+      <div class="modal-section">
+        <div class="modal-section-title">Fundamentos teóricos</div>
+        <p class="modal-text">Funciones cognitivas específicas están confinadas a regiones cerebrales delimitadas. Cada módulo procesa información de forma encapsulada e independiente. La evidencia de lesiones (Broca, Wernicke) y los mapas de Brodmann respaldan esta visión.</p>
+      </div>
+      <div class="info-box ibox-yellow">
+        <span class="info-box-icon">💡</span>
+        <div>
+          <div class="info-box-title">Referentes principales</div>
+          <div class="info-box-text">Broca & Wernicke (lenguaje), Brodmann (citoarquitectura), Fodor (modularidad de la mente), estudios de neuroimagen de activación focal.</div>
+        </div>
+      </div>
+      <div class="info-box ibox-coral">
+        <span class="info-box-icon">⚠️</span>
+        <div>
+          <div class="info-box-title">Limitaciones frente al dinamicismo</div>
+          <div class="info-box-text">El localizacionismo no explica adecuadamente fenómenos como la recuperación post-lesión (plasticidad compensatoria), el aprendizaje multimodal ni la variabilidad individual en la organización cerebral.</div>
+        </div>
+      </div>
+    `;
+  }
+  document.getElementById('modalOverlay').classList.add('open');
+  document.body.style.overflow='hidden';
+}
+
+function openArgModal(idx){
+  const a=argumentos[idx];
+  document.getElementById('mIcon').textContent=a.icon;
+  document.getElementById('mTitle').textContent=`Argumento ${a.num}: ${a.title}`;
+  document.getElementById('mBody').innerHTML=`
+    <div class="modal-section">
+      <div class="modal-section-title">Planteamiento</div>
+      <p class="modal-text">${a.text}</p>
+    </div>
+    <div class="modal-impact">
+      <div class="modal-impact-title">🏫 Aplicación práctica en e-learning</div>
+      ${a.aplicacion}
+    </div>
+    <div class="info-box ibox-teal" style="margin-top:12px">
+      <span class="info-box-icon">📚</span>
+      <div>
+        <div class="info-box-title">Evidencia científica</div>
+        <div class="info-box-text">${a.evidencia}</div>
+      </div>
+    </div>
+  `;
+  document.getElementById('modalOverlay').classList.add('open');
+  document.body.style.overflow='hidden';
+}
+
+function closeModal(e){
+  if(e.target===document.getElementById('modalOverlay')) closeModalDirect();
+}
+function closeModalDirect(){
+  document.getElementById('modalOverlay').classList.remove('open');
+  document.body.style.overflow='';
+}
+document.addEventListener('keydown',e=>{if(e.key==='Escape')closeModalDirect();});
+
+// ── ERA FILTER ──
+function filterEra(eras,btn){
+  document.querySelectorAll('.era-btn').forEach(b=>b.classList.remove('active'));
+  btn.classList.add('active');
+  const hitos=document.querySelectorAll('.hito');
+  hitos.forEach(h=>{
+    if(eras==='all'){h.style.display='flex';return;}
+    const matches=eras.split(' ').some(e=>h.classList.contains(e));
+    h.style.display=matches?'flex':'none';
+  });
+}
+
+// ── QUIZ ──
+function initQuiz(){
+  currentQ=0;score=0;answered=false;
+  renderQuestion();
+  document.getElementById('quizScore').style.display='none';
+  document.getElementById('quizQuestion').style.display='';
+  document.getElementById('quizOptions').style.display='';
+  document.getElementById('quizProgress').style.display='flex';
+}
+
+function renderQuestion(){
+  if(currentQ>=quizData.length){showScore();return;}
+  answered=false;
+  const q=quizData[currentQ];
+  document.getElementById('quizQuestion').textContent=`${currentQ+1}. ${q.q}`;
+  const opts=document.getElementById('quizOptions');
+  opts.innerHTML='';
+  q.opts.forEach((o,i)=>{
+    const btn=document.createElement('button');
+    btn.className='quiz-option';
+    btn.textContent=o;
+    btn.onclick=()=>answerQ(i,btn);
+    opts.appendChild(btn);
+  });
+  const fb=document.getElementById('quizFeedback');
+  fb.className='quiz-feedback';fb.textContent='';
+  const next=document.getElementById('quizNext');
+  next.className='quiz-next-btn';
+  // progress dots
+  const prog=document.getElementById('quizProgress');
+  prog.innerHTML='';
+  quizData.forEach((_,i)=>{
+    const d=document.createElement('div');
+    d.className='qp-dot'+(i<currentQ?' done':i===currentQ?' active':'');
+    prog.appendChild(d);
+  });
+}
+
+function answerQ(idx,btn){
+  if(answered)return;
+  answered=true;
+  const q=quizData[currentQ];
+  const allBtns=document.querySelectorAll('.quiz-option');
+  allBtns.forEach(b=>b.style.pointerEvents='none');
+  const fb=document.getElementById('quizFeedback');
+  if(idx===q.correct){
+    btn.classList.add('correct');
+    score++;
+    fb.textContent=q.fb;
+    fb.className='quiz-feedback show ok';
+  } else {
+    btn.classList.add('wrong');
+    allBtns[q.correct].classList.add('correct');
+    fb.textContent='❌ Incorrecto. '+q.fb;
+    fb.className='quiz-feedback show fail';
+  }
+  document.getElementById('quizNext').className='quiz-next-btn show';
+}
+
+function nextQuestion(){
+  currentQ++;
+  renderQuestion();
+}
+
+function showScore(){
+  document.getElementById('quizQuestion').style.display='none';
+  document.getElementById('quizOptions').style.display='none';
+  document.getElementById('quizProgress').style.display='none';
+  document.getElementById('quizFeedback').className='quiz-feedback';
+  document.getElementById('quizNext').className='quiz-next-btn';
+  const s=document.getElementById('quizScore');
+  s.style.display='block';
+  document.getElementById('scoreDisplay').textContent=`${score} / ${quizData.length}`;
+  const msgs=['Sigue repasando — ¡el contenido es fascinante! 📚','Buen intento, repasa los hitos históricos 🔍','¡Bien! Dominas los conceptos clave 🧠','¡Excelente! Eres un experto en neurociencia 🏆'];
+  const m=score<=1?msgs[0]:score<=2?msgs[1]:score<=3?msgs[2]:msgs[3];
+  document.getElementById('scoreFeedback').textContent=m;
+}
+
+function restartQuiz(){initQuiz();}
+</script>
+</body>
+</html>
